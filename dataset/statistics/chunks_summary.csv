@@ -1,0 +1,17 @@
+source_condition_query,criterion_type,number_of_chunks,unique_trials,avg_criterion_length,min_criterion_length,max_criterion_length
+anxiety,exclusion,49800,8932,83.07,15,1252
+anxiety,inclusion,39942,9240,77.13,15,3477
+breast cancer,exclusion,134464,14745,112.43,15,2561
+breast cancer,inclusion,158713,16265,104.93,15,2641
+chronic obstructive pulmonary disease,exclusion,48202,5977,101.81,15,2458
+chronic obstructive pulmonary disease,inclusion,32186,6129,98.55,15,3570
+covid-19,exclusion,68134,9470,100.43,15,3850
+covid-19,inclusion,47974,10094,100.82,15,3489
+glaucoma,exclusion,14658,2068,85.08,15,1620
+glaucoma,inclusion,9081,2160,88.88,15,1098
+rheumatoid arthritis,exclusion,29180,3476,107.5,15,3099
+rheumatoid arthritis,inclusion,19968,3622,111.77,15,2128
+sickle cell anemia,exclusion,9085,1060,95.67,15,931
+sickle cell anemia,inclusion,6820,1134,107.41,15,2146
+type 2 diabetes,exclusion,99446,11110,95.68,15,5041
+type 2 diabetes,inclusion,57854,11427,87.39,15,1872

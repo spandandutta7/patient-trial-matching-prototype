@@ -1,0 +1,6 @@
+criteria_split_status,count,percentage
+both_detected,58108,96.31
+no_heading_detected,1264,2.09
+only_inclusion_detected,821,1.36
+only_exclusion_detected,133,0.22
+missing_criteria,11,0.02

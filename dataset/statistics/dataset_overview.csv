@@ -1,0 +1,9 @@
+metric,value
+number_of_trials,60337
+number_of_unique_nct_ids,60337
+number_of_conditions_queries,8
+number_of_eligibility_chunks,825507
+number_of_inclusion_chunks,372538
+number_of_exclusion_chunks,452969
+trials_with_eligibility_criteria,60326
+trials_without_eligibility_criteria,11
