@@ -15,10 +15,11 @@ venv/
 cache/
 output/
 
-# Large datasets — exceed GitHub's 100 MB/file limit; distribute separately
+# Runtime datasets (dataset/trials_clean.csv, dataset/eligibility_criteria_chunks.csv)
+# are tracked via Git LFS — see .gitattributes.
+
+# Raw pre-cleaning data — provenance only, not used at runtime; too large to track
 dataset/raw/
-dataset/trials_clean.csv
-dataset/eligibility_criteria_chunks.csv
 
 # Bundled TrialGPT reference repo — has its own git history + large data, not needed at runtime
 TrialGPT/

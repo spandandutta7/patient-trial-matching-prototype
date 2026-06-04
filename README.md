@@ -72,6 +72,16 @@ This repo ships three complementary docs. Start here, then dig in as needed:
 
 ## Quick Start
 
+> **Cloning note:** the two large datasets (`dataset/trials_clean.csv`,
+> `dataset/eligibility_criteria_chunks.csv`) are stored with **[Git LFS](https://git-lfs.com)**.
+> Install it *before* cloning so they download as real files, not pointers:
+> ```bash
+> git lfs install
+> git clone https://github.com/spandandutta7/Saama---patient-trial-matching-prototype.git
+> ```
+> (Already cloned without LFS? Run `git lfs install && git lfs pull`.)
+> The raw pre-cleaning data (`dataset/raw/`) is not tracked — it is provenance only and not needed to run.
+
 ### 1. Install dependencies
 
 ```bash
