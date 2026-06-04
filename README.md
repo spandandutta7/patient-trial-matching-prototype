@@ -5,6 +5,10 @@ A prototype system that matches patient profiles against clinical trial eligibil
 - **BM25** — a standard probabilistic algorithm for keyword-based (lexical) search.
 - **MedCPT** — NCBI's biomedical text embedding model ([query encoder](https://huggingface.co/ncbi/MedCPT-Query-Encoder)) for semantic search.
 
+## Dataset
+
+https://www.kaggle.com/datasets/harrachimustapha/clinical-trial-eligibility-criteria-dataset
+
 ## Overview
 
 Clinical trial recruitment is slow because coordinators must manually compare free-text eligibility criteria against patient profiles at scale. This prototype automates that process through a four-step pipeline:
@@ -107,14 +111,6 @@ cp .env.example .env
 ```
 
 ### 3. Build the retrieval index (one-time setup)
-
-This encodes all 60K trials with MedCPT and stores them in LanceDB. **Encoding time depends on hardware:**
-
-| Hardware | Estimated time |
-|----------|----------------|
-| GPU (T4/A10) | ~10–20 min |
-| Apple M-series (MPS) | ~30–60 min |
-| CPU only | ~2–6 hours |
 
 ```bash
 python pipeline/build_index.py
@@ -340,25 +336,3 @@ Trials span 8 conditions: breast cancer, type 2 diabetes, COVID-19, anxiety, COP
 
 ---
 
-## Relationship to TrialGPT
-
-The retrieval layer (Steps 1–2) closely follows **TrialGPT** (`TrialGPT/trialgpt_retrieval/`,
-cloned locally for reference): the same MedCPT encoders
-(`ncbi/MedCPT-Article-Encoder` / `ncbi/MedCPT-Query-Encoder`), the same BM25 field weighting
-(title ×3, conditions ×2, text ×1), and the same Reciprocal Rank Fusion formula. Key
-differences in this prototype:
-
-| Aspect | TrialGPT | This prototype |
-|--------|----------|----------------|
-| Vector store | FAISS (ANN only) | LanceDB (ANN **+** metadata filtering by sex/age) |
-| LLM | Azure OpenAI | Claude (Haiku for matching, Sonnet for aggregation) |
-| Retrieval algorithm | BM25 + MedCPT + RRF | Identical |
-| Output | Score only | Rich JSON with criterion breakdown, decisions, explanations |
-
-None of `TrialGPT/` is imported at runtime — it is reference material only.
-
----
-
-## License
-
-This project is a research prototype. The TrialGPT reference code in `TrialGPT/` is subject to its own license. MedCPT models are from NCBI and subject to HuggingFace model terms.
