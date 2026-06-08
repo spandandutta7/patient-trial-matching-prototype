@@ -5,14 +5,18 @@ Mirrors TrialGPT's MedCPT FAISS approach but stores vectors in LanceDB,
 which adds metadata filtering and structured retrieval on top of ANN search.
 
 Encoding:
-  - Trials    → ncbi/MedCPT-Article-Encoder  (title + text, max 512 tokens)
-  - Queries   → ncbi/MedCPT-Query-Encoder    (condition string, max 256 tokens)
+  - Trials  → ncbi/MedCPT-Article-Encoder  (title + brief_summary + inclusion_criteria, max 512 tokens)
+  - Queries → ncbi/MedCPT-Query-Encoder    (condition string, max 256 tokens)
   - Representation: [CLS] hidden state (768-dim float32)
 
 Storage:
   - LanceDB table "trials" with schema:
-      nct_id, title, conditions, sex, min_age, max_age,
-      study_type, phase, combined_text, vector (768-dim)
+      nct_id, title, conditions, source_condition_query, sex, min_age, max_age,
+      study_type, phase, vector (768-dim)
+
+  source_condition_query is the therapeutic area label from the dataset
+  (e.g. "breast cancer") and is used as a pre-filter so ANN search only
+  scans the relevant condition subset.
 """
 
 import json
@@ -88,16 +92,21 @@ class MedCPTRetriever:
             ).to(self._device)
             self._query_model.eval()
 
-    def build(self, trials_df: pd.DataFrame) -> None:
-        """Encode all trials and store in LanceDB. Skip if table already exists."""
+    def build(self, trials_df: pd.DataFrame, force: bool = False) -> None:
+        """Encode all trials and store in LanceDB. Skip if table already exists.
+
+        Pass force=True to drop and rebuild an existing table (e.g. after a schema change
+        or when re-running with a different --max-trials value).
+        """
         os.makedirs(self._db_dir, exist_ok=True)
         self._open_db()
 
-        if _LANCEDB_TABLE in self._db.table_names():
+        if not force and _LANCEDB_TABLE in self._db.table_names():
             print(f"[MedCPT] LanceDB table '{_LANCEDB_TABLE}' already exists — loading.")
             self._table = self._db.open_table(_LANCEDB_TABLE)
             if os.path.exists(_NCTIDS_CACHE):
-                self._nctids = json.load(open(_NCTIDS_CACHE))
+                with open(_NCTIDS_CACHE) as f:
+                    self._nctids = json.load(f)
             else:
                 self._nctids = self._table.to_pandas()["nct_id"].tolist()
             print(f"[MedCPT] Loaded {len(self._nctids):,} trial embeddings.")
@@ -116,7 +125,12 @@ class MedCPTRetriever:
         art_model.eval()
 
         title_text_pairs = [
-            (str(row["title"]), str(row["combined_text_for_retrieval"]))
+            (
+                str(row["title"]),
+                str(row.get("brief_summary", ""))
+                + "\n\nInclusion Criteria:\n"
+                + str(row.get("inclusion_criteria", "")),
+            )
             for _, row in trials_df.iterrows()
         ]
         nctids = trials_df["nct_id"].tolist()
@@ -140,6 +154,7 @@ class MedCPTRetriever:
                 "nct_id": nct_id,
                 "title": str(getattr(row, "title", "")),
                 "conditions": str(getattr(row, "conditions", "")),
+                "source_condition_query": str(getattr(row, "source_condition_query", "")),
                 "sex": str(getattr(row, "sex", "ALL")),
                 "min_age": min_age,
                 "max_age": max_age,
@@ -152,6 +167,7 @@ class MedCPTRetriever:
             pa.field("nct_id", pa.string()),
             pa.field("title", pa.string()),
             pa.field("conditions", pa.string()),
+            pa.field("source_condition_query", pa.string()),
             pa.field("sex", pa.string()),
             pa.field("min_age", pa.int32()),
             pa.field("max_age", pa.int32()),
@@ -165,7 +181,8 @@ class MedCPTRetriever:
         )
         self._nctids = nctids
         os.makedirs(os.path.dirname(_NCTIDS_CACHE), exist_ok=True)
-        json.dump(nctids, open(_NCTIDS_CACHE, "w"))
+        with open(_NCTIDS_CACHE, "w") as f:
+            json.dump(nctids, f)
         print(f"[MedCPT] LanceDB index built with {len(nctids):,} trials.")
 
     def load(self) -> None:
@@ -177,7 +194,8 @@ class MedCPTRetriever:
             )
         self._table = self._db.open_table(_LANCEDB_TABLE)
         if os.path.exists(_NCTIDS_CACHE):
-            self._nctids = json.load(open(_NCTIDS_CACHE))
+            with open(_NCTIDS_CACHE) as f:
+                self._nctids = json.load(f)
         else:
             self._nctids = self._table.to_pandas()["nct_id"].tolist()
 
@@ -188,14 +206,18 @@ class MedCPTRetriever:
         sex_filter: str = None,
         min_age: int = None,
         max_age: int = None,
+        indication: str = None,
     ) -> list[list[str]]:
         """Encode query conditions and search the LanceDB ANN index.
 
         Returns a list aligned with `conditions`, each element being an ordered
         list of NCT IDs (most similar first).
 
-        Optional metadata filters (sex_filter, min_age, max_age) narrow the
-        search space — this is the structured-retrieval advantage over pure FAISS.
+        Metadata filters narrow the search space before ANN scoring:
+          - indication: source_condition_query value (e.g. "breast cancer") — the
+            primary pre-filter that restricts search to only the relevant
+            therapeutic area subset of the index.
+          - sex_filter, min_age, max_age: patient demographics (optional).
         """
         if self._table is None:
             raise RuntimeError("Call build() or load() before search().")
@@ -219,10 +241,15 @@ class MedCPTRetriever:
                 .numpy()
             )
 
-        # Build optional WHERE clause for metadata pre-filtering
+        # Build WHERE clause for metadata pre-filtering
         where_clauses = []
+        if indication:
+            # Escape single quotes in case the indication string contains one
+            safe_ind = indication.replace("'", "''")
+            where_clauses.append(f"source_condition_query = '{safe_ind}'")
         if sex_filter and sex_filter.upper() not in ("ALL", ""):
-            where_clauses.append(f"(sex = '{sex_filter.upper()}' OR sex = 'ALL')")
+            safe_sex = sex_filter.upper().replace("'", "''")
+            where_clauses.append(f"(sex = '{safe_sex}' OR sex = 'ALL')")
         if min_age is not None:
             where_clauses.append(f"max_age >= {min_age}")
         if max_age is not None:

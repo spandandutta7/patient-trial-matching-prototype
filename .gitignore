@@ -23,3 +23,6 @@ dataset/raw/
 
 # Bundled TrialGPT reference repo — has its own git history + large data, not needed at runtime
 TrialGPT/
+
+# Internal notes — not for public repo
+DONOTPUSH/

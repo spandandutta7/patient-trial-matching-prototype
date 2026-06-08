@@ -1,0 +1,30 @@
+> **SYNTHETIC RECORD — NOT A REAL PATIENT.** Generated for clinical-research / pipeline-testing purposes only.
+
+# Discharge Summary
+
+**Patient:** Robert Rossi (MRN SYN-357141) — 76yo male
+**Date:** 2023-05-24  
+**Condition:** Chronic obstructive pulmonary disease — COPD (GOLD group D) with recurrent exacerbations
+
+**Admission reason:** Acute exacerbation of COPD
+**Length of stay:** 5 day(s)
+**Service:** Pulmonology
+
+## Hospital Course
+The patient was admitted with acute exacerbation of copd. On admission, vitals were
+BP 150/87, T 37.9, HR 100, RR 26, SpO2 88%. Management was directed at stabilisation and treatment of the
+acute event. Relevant results during admission:
+  - FEV1 (% predicted): 47 % (L) [ref 80-120]
+  - PaCO2 (venous): 53 mm[Hg] (H) [ref 35-45]
+
+The patient responded to inpatient therapy and was stable for discharge.
+
+## Discharge Medications
+  - Tiotropium 18 mcg inhaled daily
+  - Umeclidinium/vilanterol 62.5/25 mcg inhaled daily
+
+## Disposition & Follow-up
+Discharged home in stable condition. Outpatient Pulmonology
+follow-up arranged.
+
+*Electronically signed by Pulmonology service (synthetic).*

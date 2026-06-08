@@ -1,6 +1,6 @@
 """Utilities for loading the clinical trial datasets."""
 
-import json
+import re
 import pandas as pd
 from pathlib import Path
 from typing import Optional
@@ -14,7 +14,6 @@ def load_trials(nrows: Optional[int] = None) -> pd.DataFrame:
     df["conditions"] = df["conditions"].fillna(df["source_condition_query"])
     df["conditions"] = df["conditions"].fillna("")
     df["title"] = df["title"].fillna("")
-    df["combined_text_for_retrieval"] = df["combined_text_for_retrieval"].fillna("")
     df["inclusion_criteria"] = df["inclusion_criteria"].fillna("")
     df["exclusion_criteria"] = df["exclusion_criteria"].fillna("")
     df["brief_summary"] = df["brief_summary"].fillna("")
@@ -27,31 +26,68 @@ def load_trials(nrows: Optional[int] = None) -> pd.DataFrame:
     return df
 
 
-def load_criteria_chunks(nct_ids: Optional[list] = None) -> pd.DataFrame:
-    """Load eligibility criteria chunks, optionally filtered to specific trial IDs."""
+def load_criteria_chunks() -> pd.DataFrame:
+    """Load all eligibility criteria chunks."""
     df = pd.read_csv(config.CRITERIA_CHUNKS_CSV, low_memory=False)
-    if nct_ids is not None:
-        df = df[df["nct_id"].isin(nct_ids)]
     df["criterion_text"] = df["criterion_text"].fillna("")
     return df
 
 
+# Matches the summary table row:  | **Sex / Age** | female, 70 at enrollment |
+_SEX_AGE_RE = re.compile(
+    r"Sex\s*/\s*Age\s*\*\*\s*\|\s*(male|female)\s*,\s*(\d+)", re.IGNORECASE
+)
+
+
+def _parse_patient_summary(summary_path: Path, patient_id: str) -> dict:
+    """Build a patient dict from a patient_summary.md file.
+
+    Returns {_id, text, sex, age} where:
+      - text: the full summary markdown (the matching pipeline's input note)
+      - sex:  "FEMALE" / "MALE" / None  (uppercased to match trial metadata)
+      - age:  int years at enrollment / None
+    These drive the LanceDB sex/age pre-filter; missing values fall back to None
+    (no filtering) so a malformed summary degrades gracefully.
+    """
+    text = summary_path.read_text()
+    sex, age = None, None
+    m = _SEX_AGE_RE.search(text)
+    if m:
+        sex = m.group(1).upper()
+        age = int(m.group(2))
+    return {"_id": patient_id, "text": text, "sex": sex, "age": age}
+
+
 def load_patients() -> list[dict]:
-    """Load all patient profiles from JSONL."""
+    """Load all patients from patient-datasets/<id>/patient_summary.md.
+
+    Each immediate subdirectory of PATIENT_DATASETS_DIR is one patient; the
+    folder name is the patient _id (e.g. "breast-cancer").
+    """
     patients = []
-    with open(config.PATIENT_PROFILES_JSONL, "r") as f:
-        for line in f:
-            line = line.strip()
-            if line:
-                patients.append(json.loads(line))
+    base = config.PATIENT_DATASETS_DIR
+    for folder in sorted(p for p in base.iterdir() if p.is_dir()):
+        summary_path = folder / config.PATIENT_SUMMARY_FILENAME
+        if summary_path.exists():
+            patients.append(_parse_patient_summary(summary_path, folder.name))
     return patients
 
 
 def get_patient_by_id(patient_id: str) -> Optional[dict]:
-    """Retrieve a single patient by _id."""
-    for patient in load_patients():
-        if patient["_id"] == patient_id:
-            return patient
+    """Retrieve a single patient by folder name or by indication string.
+
+    Accepts either the raw folder name (e.g. "breast-cancer") or the
+    corresponding SUPPORTED_INDICATIONS string (e.g. "breast cancer"), so
+    --patient-indication works with both naming conventions.
+    """
+    from retrieval.indication_classifier import INDICATION_TO_FOLDER
+
+    folder_name = INDICATION_TO_FOLDER.get(patient_id.lower(), patient_id)
+    summary_path = (
+        config.PATIENT_DATASETS_DIR / folder_name / config.PATIENT_SUMMARY_FILENAME
+    )
+    if summary_path.exists():
+        return _parse_patient_summary(summary_path, folder_name)
     return None
 
 

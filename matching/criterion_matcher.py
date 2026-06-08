@@ -11,11 +11,11 @@ For each candidate trial, the matcher:
 Output schema per trial:
   {
     "inclusion": {
-      "0": ["reasoning", [sentence_ids], "included|not included|not applicable|not enough information"],
+      "0": ["reasoning", [sentence_ids], "included|not included|not applicable|not enough information", 0.9],
       ...
     },
     "exclusion": {
-      "0": ["reasoning", [sentence_ids], "excluded|not excluded|not applicable|not enough information"],
+      "0": ["reasoning", [sentence_ids], "excluded|not excluded|not applicable|not enough information", 0.85],
       ...
     }
   }
@@ -27,6 +27,7 @@ from nltk.tokenize import sent_tokenize
 import anthropic
 import config
 import nltk
+from utils.json_utils import strip_json_fences
 
 try:
     nltk.data.find("tokenizers/punkt_tab")
@@ -47,7 +48,7 @@ the patient's eligibility at the criterion level.
 
 {criterion_definition}
 
-Check each {inc_exc} criterion one by one and output three elements per criterion:
+Check each {inc_exc} criterion one by one and output four elements per criterion:
   Element 1 — Reasoning: Judge whether the criterion is not applicable, then look \
 for direct evidence in the patient note. If no direct evidence, infer from context. \
 If the criterion would clearly appear in a complete patient note but does not, \
@@ -56,9 +57,11 @@ assume it is not true for this patient.
   Element 3 — Eligibility label chosen from {labels}. \
 Use "not applicable" only for criteria irrelevant to this patient. \
 Use "not enough information" sparingly.
+  Element 4 — Confidence in [0,1]: score ≥0.8 only when direct explicit evidence \
+in the patient note supports your label; use 0.5 for inferred or uncertain assessments.
 
 Output ONLY a JSON dict:
-dict{{str(criterion_index): list[str(reasoning), list[int(sentence_id)], str(label)]}}
+dict{{str(criterion_index): list[str(reasoning), list[int(sentence_id)], str(label), float(confidence)]}}
 """
 
 _INCLUSION_DEF = (
@@ -127,8 +130,8 @@ class CriterionMatcher:
             max_criteria: Cap per inc/exc group to control LLM cost.
 
         Returns:
-            {"inclusion": {idx: [reasoning, [sent_ids], label], ...},
-             "exclusion": {idx: [reasoning, [sent_ids], label], ...}}
+            {"inclusion": {idx: [reasoning, [sent_ids], label, confidence], ...},
+             "exclusion": {idx: [reasoning, [sent_ids], label, confidence], ...}}
         """
         max_criteria = max_criteria or config.MAX_CRITERIA_PER_TRIAL
         nct_id = trial_info["nct_id"]
@@ -167,20 +170,16 @@ class CriterionMatcher:
             try:
                 message = self._client.messages.create(
                     model=config.CLAUDE_MODEL_FAST,
-                    max_tokens=2048,
+                    max_tokens=8192,
                     system=system_prompt,
                     messages=[{"role": "user", "content": user_prompt}],
                     temperature=0,
                 )
-                raw = message.content[0].text.strip()
-                if raw.startswith("```"):
-                    raw = raw.strip("`").lstrip("json").strip()
+                raw = strip_json_fences(message.content[0].text.strip())
                 results[inc_exc] = json.loads(raw)
-            except (json.JSONDecodeError, Exception) as e:
+            except Exception as e:
                 # On failure, record raw text so pipeline can continue
                 results[inc_exc] = {"error": str(e)}
 
             
-            time.sleep(0.3)
-
         return results

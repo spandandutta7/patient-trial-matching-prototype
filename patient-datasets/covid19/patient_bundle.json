@@ -1,0 +1,5727 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://example.org/synthetic-data",
+        "code": "SYNTHETIC",
+        "display": "Synthetic record \u2014 not a real patient"
+      }
+    ]
+  },
+  "timestamp": "2022-02-22",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:Patient-synthetic-132012",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "synthetic-132012",
+        "meta": {
+          "tag": [
+            {
+              "system": "https://example.org/synthetic-data",
+              "code": "SYNTHETIC",
+              "display": "Synthetic record \u2014 not a real patient"
+            }
+          ]
+        },
+        "extension": [
+          {
+            "url": "https://example.org/fhir/StructureDefinition/synthetic",
+            "valueBoolean": true
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://example.org/mrn",
+            "value": "SYN-132012"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Fischer",
+            "given": [
+              "Michael"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1971-05-16",
+        "address": [
+          {
+            "city": "Riverside",
+            "state": "CA",
+            "country": "US"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Condition-cond-000",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-000",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "U07.1",
+              "display": "COVID-19, virus identified"
+            }
+          ],
+          "text": "COVID-19, virus identified"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "onsetDateTime": "2022-02-22"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Condition-cond-001",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-001",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "E66.9",
+              "display": "Obesity"
+            }
+          ],
+          "text": "Obesity"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "onsetDateTime": "2022-02-22"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Condition-cond-002",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-002",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "J45.909",
+              "display": "Asthma"
+            }
+          ],
+          "text": "Asthma"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "onsetDateTime": "2022-02-22"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Condition-cond-003",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-003",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "J12.82",
+              "display": "Pneumonia due to coronavirus disease 2019"
+            }
+          ],
+          "text": "Pneumonia due to coronavirus disease 2019"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "onsetDateTime": "2022-02-22"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Condition-cond-004",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-004",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "encounter-diagnosis"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "U09.9",
+              "display": "Post COVID-19 condition, unspecified"
+            }
+          ],
+          "text": "Post COVID-19 condition, unspecified"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "onsetDateTime": "2022-07-28"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Encounter-enc-001",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-001",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "IMP",
+          "display": "inpatient encounter"
+        },
+        "type": [
+          {
+            "text": "Acute hypoxaemic respiratory episode"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "participant": [
+          {
+            "individual": {
+              "display": "Pulmonology service"
+            }
+          }
+        ],
+        "period": {
+          "start": "2022-02-22",
+          "end": "2022-03-01"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00000",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00000",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5",
+              "display": "C-reactive protein"
+            }
+          ],
+          "text": "C-reactive protein"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-001"
+        },
+        "effectiveDateTime": "2022-02-22",
+        "valueQuantity": {
+          "value": 136.2,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "unit": "mg/L"
+            },
+            "high": {
+              "value": 5,
+              "unit": "mg/L"
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00001",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00001",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "48065-7",
+              "display": "D-dimer"
+            }
+          ],
+          "text": "D-dimer"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-001"
+        },
+        "effectiveDateTime": "2022-02-22",
+        "valueQuantity": {
+          "value": 1796,
+          "unit": "ng/mL FEU",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL FEU"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "unit": "ng/mL FEU"
+            },
+            "high": {
+              "value": 500,
+              "unit": "ng/mL FEU"
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00002",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00002",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2276-4",
+              "display": "Ferritin"
+            }
+          ],
+          "text": "Ferritin"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-001"
+        },
+        "effectiveDateTime": "2022-02-22",
+        "valueQuantity": {
+          "value": 1123,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 30,
+              "unit": "ng/mL"
+            },
+            "high": {
+              "value": 400,
+              "unit": "ng/mL"
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00003",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00003",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "731-0",
+              "display": "Absolute lymphocyte count"
+            }
+          ],
+          "text": "Absolute lymphocyte count"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-001"
+        },
+        "effectiveDateTime": "2022-02-22",
+        "valueQuantity": {
+          "value": 0.3,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 1.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 4.0,
+              "unit": "10*3/uL"
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "L",
+                "display": "Low"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00004",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00004",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "14804-9",
+              "display": "Lactate dehydrogenase"
+            }
+          ],
+          "text": "Lactate dehydrogenase"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-001"
+        },
+        "effectiveDateTime": "2022-02-22",
+        "valueQuantity": {
+          "value": 423,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 122,
+              "unit": "U/L"
+            },
+            "high": {
+              "value": 222,
+              "unit": "U/L"
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00005",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00005",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-001"
+        },
+        "effectiveDateTime": "2022-02-22",
+        "valueQuantity": {
+          "value": 87.8,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00006",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00006",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-001"
+        },
+        "effectiveDateTime": "2022-02-22",
+        "valueQuantity": {
+          "value": 137,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00007",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00007",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-001"
+        },
+        "effectiveDateTime": "2022-02-22",
+        "valueQuantity": {
+          "value": 89,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00008",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00008",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-001"
+        },
+        "effectiveDateTime": "2022-02-22",
+        "valueQuantity": {
+          "value": 105,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00009",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00009",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-001"
+        },
+        "effectiveDateTime": "2022-02-22",
+        "valueQuantity": {
+          "value": 23,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00010",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00010",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-001"
+        },
+        "effectiveDateTime": "2022-02-22",
+        "valueQuantity": {
+          "value": 38.3,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00011",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00011",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-001"
+        },
+        "effectiveDateTime": "2022-02-22",
+        "valueQuantity": {
+          "value": 87,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Encounter-enc-007",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-007",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "text": "Routine follow-up"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "participant": [
+          {
+            "individual": {
+              "display": "Internal Medicine service"
+            }
+          }
+        ],
+        "period": {
+          "start": "2022-06-25",
+          "end": "2022-06-25"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00012",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00012",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5",
+              "display": "C-reactive protein"
+            }
+          ],
+          "text": "C-reactive protein"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-007"
+        },
+        "effectiveDateTime": "2022-06-25",
+        "valueQuantity": {
+          "value": 6.1,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "unit": "mg/L"
+            },
+            "high": {
+              "value": 5,
+              "unit": "mg/L"
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00013",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00013",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "48065-7",
+              "display": "D-dimer"
+            }
+          ],
+          "text": "D-dimer"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-007"
+        },
+        "effectiveDateTime": "2022-06-25",
+        "valueQuantity": {
+          "value": 321,
+          "unit": "ng/mL FEU",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL FEU"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "unit": "ng/mL FEU"
+            },
+            "high": {
+              "value": 500,
+              "unit": "ng/mL FEU"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00014",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00014",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2276-4",
+              "display": "Ferritin"
+            }
+          ],
+          "text": "Ferritin"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-007"
+        },
+        "effectiveDateTime": "2022-06-25",
+        "valueQuantity": {
+          "value": 237,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 30,
+              "unit": "ng/mL"
+            },
+            "high": {
+              "value": 400,
+              "unit": "ng/mL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00015",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00015",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "731-0",
+              "display": "Absolute lymphocyte count"
+            }
+          ],
+          "text": "Absolute lymphocyte count"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-007"
+        },
+        "effectiveDateTime": "2022-06-25",
+        "valueQuantity": {
+          "value": 1.8,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 1.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 4.0,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00016",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00016",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "14804-9",
+              "display": "Lactate dehydrogenase"
+            }
+          ],
+          "text": "Lactate dehydrogenase"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-007"
+        },
+        "effectiveDateTime": "2022-06-25",
+        "valueQuantity": {
+          "value": 207,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 122,
+              "unit": "U/L"
+            },
+            "high": {
+              "value": 222,
+              "unit": "U/L"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00017",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00017",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-007"
+        },
+        "effectiveDateTime": "2022-06-25",
+        "valueQuantity": {
+          "value": 88.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00018",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00018",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-007"
+        },
+        "effectiveDateTime": "2022-06-25",
+        "valueQuantity": {
+          "value": 128,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00019",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00019",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-007"
+        },
+        "effectiveDateTime": "2022-06-25",
+        "valueQuantity": {
+          "value": 84,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00020",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00020",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-007"
+        },
+        "effectiveDateTime": "2022-06-25",
+        "valueQuantity": {
+          "value": 87,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00021",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00021",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-007"
+        },
+        "effectiveDateTime": "2022-06-25",
+        "valueQuantity": {
+          "value": 17,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00022",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00022",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-007"
+        },
+        "effectiveDateTime": "2022-06-25",
+        "valueQuantity": {
+          "value": 36.8,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00023",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00023",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-007"
+        },
+        "effectiveDateTime": "2022-06-25",
+        "valueQuantity": {
+          "value": 98,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Encounter-enc-002",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-002",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "text": "Post-COVID symptom flare"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "participant": [
+          {
+            "individual": {
+              "display": "Pulmonology service"
+            }
+          }
+        ],
+        "period": {
+          "start": "2022-07-28",
+          "end": "2022-08-02"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00024",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00024",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-002"
+        },
+        "effectiveDateTime": "2022-07-28",
+        "valueQuantity": {
+          "value": 88.1,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00025",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00025",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-002"
+        },
+        "effectiveDateTime": "2022-07-28",
+        "valueQuantity": {
+          "value": 136,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00026",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00026",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-002"
+        },
+        "effectiveDateTime": "2022-07-28",
+        "valueQuantity": {
+          "value": 85,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00027",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00027",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-002"
+        },
+        "effectiveDateTime": "2022-07-28",
+        "valueQuantity": {
+          "value": 108,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00028",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00028",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-002"
+        },
+        "effectiveDateTime": "2022-07-28",
+        "valueQuantity": {
+          "value": 25,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00029",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00029",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-002"
+        },
+        "effectiveDateTime": "2022-07-28",
+        "valueQuantity": {
+          "value": 38.2,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00030",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00030",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-002"
+        },
+        "effectiveDateTime": "2022-07-28",
+        "valueQuantity": {
+          "value": 89,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Encounter-enc-008",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-008",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "text": "Routine follow-up"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "participant": [
+          {
+            "individual": {
+              "display": "Internal Medicine service"
+            }
+          }
+        ],
+        "period": {
+          "start": "2022-10-23",
+          "end": "2022-10-23"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00031",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00031",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5",
+              "display": "C-reactive protein"
+            }
+          ],
+          "text": "C-reactive protein"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-008"
+        },
+        "effectiveDateTime": "2022-10-23",
+        "valueQuantity": {
+          "value": 0.5,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "unit": "mg/L"
+            },
+            "high": {
+              "value": 5,
+              "unit": "mg/L"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00032",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00032",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "48065-7",
+              "display": "D-dimer"
+            }
+          ],
+          "text": "D-dimer"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-008"
+        },
+        "effectiveDateTime": "2022-10-23",
+        "valueQuantity": {
+          "value": 206,
+          "unit": "ng/mL FEU",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL FEU"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "unit": "ng/mL FEU"
+            },
+            "high": {
+              "value": 500,
+              "unit": "ng/mL FEU"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00033",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00033",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2276-4",
+              "display": "Ferritin"
+            }
+          ],
+          "text": "Ferritin"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-008"
+        },
+        "effectiveDateTime": "2022-10-23",
+        "valueQuantity": {
+          "value": 206,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 30,
+              "unit": "ng/mL"
+            },
+            "high": {
+              "value": 400,
+              "unit": "ng/mL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00034",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00034",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "731-0",
+              "display": "Absolute lymphocyte count"
+            }
+          ],
+          "text": "Absolute lymphocyte count"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-008"
+        },
+        "effectiveDateTime": "2022-10-23",
+        "valueQuantity": {
+          "value": 1.6,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 1.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 4.0,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00035",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00035",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "14804-9",
+              "display": "Lactate dehydrogenase"
+            }
+          ],
+          "text": "Lactate dehydrogenase"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-008"
+        },
+        "effectiveDateTime": "2022-10-23",
+        "valueQuantity": {
+          "value": 199,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 122,
+              "unit": "U/L"
+            },
+            "high": {
+              "value": 222,
+              "unit": "U/L"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00036",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00036",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-008"
+        },
+        "effectiveDateTime": "2022-10-23",
+        "valueQuantity": {
+          "value": 88.4,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00037",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00037",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-008"
+        },
+        "effectiveDateTime": "2022-10-23",
+        "valueQuantity": {
+          "value": 120,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00038",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00038",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-008"
+        },
+        "effectiveDateTime": "2022-10-23",
+        "valueQuantity": {
+          "value": 81,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00039",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00039",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-008"
+        },
+        "effectiveDateTime": "2022-10-23",
+        "valueQuantity": {
+          "value": 91,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00040",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00040",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-008"
+        },
+        "effectiveDateTime": "2022-10-23",
+        "valueQuantity": {
+          "value": 17,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00041",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00041",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-008"
+        },
+        "effectiveDateTime": "2022-10-23",
+        "valueQuantity": {
+          "value": 37.3,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00042",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00042",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-008"
+        },
+        "effectiveDateTime": "2022-10-23",
+        "valueQuantity": {
+          "value": 97,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Encounter-enc-009",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-009",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "text": "Routine follow-up"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "participant": [
+          {
+            "individual": {
+              "display": "Internal Medicine service"
+            }
+          }
+        ],
+        "period": {
+          "start": "2023-02-17",
+          "end": "2023-02-17"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00043",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00043",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5",
+              "display": "C-reactive protein"
+            }
+          ],
+          "text": "C-reactive protein"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-009"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "valueQuantity": {
+          "value": 5.4,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "unit": "mg/L"
+            },
+            "high": {
+              "value": 5,
+              "unit": "mg/L"
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00044",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00044",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "48065-7",
+              "display": "D-dimer"
+            }
+          ],
+          "text": "D-dimer"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-009"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "valueQuantity": {
+          "value": 386,
+          "unit": "ng/mL FEU",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL FEU"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "unit": "ng/mL FEU"
+            },
+            "high": {
+              "value": 500,
+              "unit": "ng/mL FEU"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00045",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00045",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2276-4",
+              "display": "Ferritin"
+            }
+          ],
+          "text": "Ferritin"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-009"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "valueQuantity": {
+          "value": 205,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 30,
+              "unit": "ng/mL"
+            },
+            "high": {
+              "value": 400,
+              "unit": "ng/mL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00046",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00046",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "731-0",
+              "display": "Absolute lymphocyte count"
+            }
+          ],
+          "text": "Absolute lymphocyte count"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-009"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "valueQuantity": {
+          "value": 1.5,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 1.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 4.0,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00047",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00047",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "14804-9",
+              "display": "Lactate dehydrogenase"
+            }
+          ],
+          "text": "Lactate dehydrogenase"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-009"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "valueQuantity": {
+          "value": 157,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 122,
+              "unit": "U/L"
+            },
+            "high": {
+              "value": 222,
+              "unit": "U/L"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00048",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00048",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-009"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "valueQuantity": {
+          "value": 87.9,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00049",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00049",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-009"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "valueQuantity": {
+          "value": 138,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00050",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00050",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-009"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "valueQuantity": {
+          "value": 77,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00051",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00051",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-009"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "valueQuantity": {
+          "value": 87,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00052",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00052",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-009"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "valueQuantity": {
+          "value": 19,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00053",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00053",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-009"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "valueQuantity": {
+          "value": 36.8,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00054",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00054",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-009"
+        },
+        "effectiveDateTime": "2023-02-17",
+        "valueQuantity": {
+          "value": 98,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Encounter-enc-003",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-003",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "text": "Post-COVID symptom flare"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "participant": [
+          {
+            "individual": {
+              "display": "Pulmonology service"
+            }
+          }
+        ],
+        "period": {
+          "start": "2023-05-04",
+          "end": "2023-05-09"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00055",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00055",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-003"
+        },
+        "effectiveDateTime": "2023-05-04",
+        "valueQuantity": {
+          "value": 88.8,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00056",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00056",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-003"
+        },
+        "effectiveDateTime": "2023-05-04",
+        "valueQuantity": {
+          "value": 148,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00057",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00057",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-003"
+        },
+        "effectiveDateTime": "2023-05-04",
+        "valueQuantity": {
+          "value": 85,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00058",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00058",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-003"
+        },
+        "effectiveDateTime": "2023-05-04",
+        "valueQuantity": {
+          "value": 109,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00059",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00059",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-003"
+        },
+        "effectiveDateTime": "2023-05-04",
+        "valueQuantity": {
+          "value": 22,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00060",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00060",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-003"
+        },
+        "effectiveDateTime": "2023-05-04",
+        "valueQuantity": {
+          "value": 38.5,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00061",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00061",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-003"
+        },
+        "effectiveDateTime": "2023-05-04",
+        "valueQuantity": {
+          "value": 86,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Encounter-enc-004",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-004",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "text": "Post-COVID symptom flare"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "participant": [
+          {
+            "individual": {
+              "display": "Pulmonology service"
+            }
+          }
+        ],
+        "period": {
+          "start": "2023-06-08",
+          "end": "2023-06-13"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00062",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00062",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-004"
+        },
+        "effectiveDateTime": "2023-06-08",
+        "valueQuantity": {
+          "value": 88.8,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00063",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00063",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-004"
+        },
+        "effectiveDateTime": "2023-06-08",
+        "valueQuantity": {
+          "value": 122,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00064",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00064",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-004"
+        },
+        "effectiveDateTime": "2023-06-08",
+        "valueQuantity": {
+          "value": 87,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00065",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00065",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-004"
+        },
+        "effectiveDateTime": "2023-06-08",
+        "valueQuantity": {
+          "value": 102,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00066",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00066",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-004"
+        },
+        "effectiveDateTime": "2023-06-08",
+        "valueQuantity": {
+          "value": 22,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00067",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00067",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-004"
+        },
+        "effectiveDateTime": "2023-06-08",
+        "valueQuantity": {
+          "value": 38.1,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00068",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00068",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-004"
+        },
+        "effectiveDateTime": "2023-06-08",
+        "valueQuantity": {
+          "value": 86,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Encounter-enc-005",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-005",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "text": "Post-COVID symptom flare"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "participant": [
+          {
+            "individual": {
+              "display": "Pulmonology service"
+            }
+          }
+        ],
+        "period": {
+          "start": "2023-10-06",
+          "end": "2023-10-11"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00069",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00069",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-005"
+        },
+        "effectiveDateTime": "2023-10-06",
+        "valueQuantity": {
+          "value": 88.1,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00070",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00070",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-005"
+        },
+        "effectiveDateTime": "2023-10-06",
+        "valueQuantity": {
+          "value": 152,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00071",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00071",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-005"
+        },
+        "effectiveDateTime": "2023-10-06",
+        "valueQuantity": {
+          "value": 81,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00072",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00072",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-005"
+        },
+        "effectiveDateTime": "2023-10-06",
+        "valueQuantity": {
+          "value": 103,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00073",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00073",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-005"
+        },
+        "effectiveDateTime": "2023-10-06",
+        "valueQuantity": {
+          "value": 25,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00074",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00074",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-005"
+        },
+        "effectiveDateTime": "2023-10-06",
+        "valueQuantity": {
+          "value": 37.9,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00075",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00075",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-005"
+        },
+        "effectiveDateTime": "2023-10-06",
+        "valueQuantity": {
+          "value": 86,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Encounter-enc-010",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-010",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "text": "Routine follow-up"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "participant": [
+          {
+            "individual": {
+              "display": "Internal Medicine service"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-02-08",
+          "end": "2024-02-08"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00076",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00076",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5",
+              "display": "C-reactive protein"
+            }
+          ],
+          "text": "C-reactive protein"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-010"
+        },
+        "effectiveDateTime": "2024-02-08",
+        "valueQuantity": {
+          "value": 14.3,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "unit": "mg/L"
+            },
+            "high": {
+              "value": 5,
+              "unit": "mg/L"
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00077",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00077",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "48065-7",
+              "display": "D-dimer"
+            }
+          ],
+          "text": "D-dimer"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-010"
+        },
+        "effectiveDateTime": "2024-02-08",
+        "valueQuantity": {
+          "value": 633,
+          "unit": "ng/mL FEU",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL FEU"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "unit": "ng/mL FEU"
+            },
+            "high": {
+              "value": 500,
+              "unit": "ng/mL FEU"
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00078",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00078",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2276-4",
+              "display": "Ferritin"
+            }
+          ],
+          "text": "Ferritin"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-010"
+        },
+        "effectiveDateTime": "2024-02-08",
+        "valueQuantity": {
+          "value": 316,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 30,
+              "unit": "ng/mL"
+            },
+            "high": {
+              "value": 400,
+              "unit": "ng/mL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00079",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00079",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "731-0",
+              "display": "Absolute lymphocyte count"
+            }
+          ],
+          "text": "Absolute lymphocyte count"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-010"
+        },
+        "effectiveDateTime": "2024-02-08",
+        "valueQuantity": {
+          "value": 1.1,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 1.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 4.0,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00080",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00080",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "14804-9",
+              "display": "Lactate dehydrogenase"
+            }
+          ],
+          "text": "Lactate dehydrogenase"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-010"
+        },
+        "effectiveDateTime": "2024-02-08",
+        "valueQuantity": {
+          "value": 234,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 122,
+              "unit": "U/L"
+            },
+            "high": {
+              "value": 222,
+              "unit": "U/L"
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00081",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00081",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-010"
+        },
+        "effectiveDateTime": "2024-02-08",
+        "valueQuantity": {
+          "value": 87.7,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00082",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00082",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-010"
+        },
+        "effectiveDateTime": "2024-02-08",
+        "valueQuantity": {
+          "value": 139,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00083",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00083",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-010"
+        },
+        "effectiveDateTime": "2024-02-08",
+        "valueQuantity": {
+          "value": 88,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00084",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00084",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-010"
+        },
+        "effectiveDateTime": "2024-02-08",
+        "valueQuantity": {
+          "value": 93,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00085",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00085",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-010"
+        },
+        "effectiveDateTime": "2024-02-08",
+        "valueQuantity": {
+          "value": 18,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00086",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00086",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-010"
+        },
+        "effectiveDateTime": "2024-02-08",
+        "valueQuantity": {
+          "value": 37.1,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00087",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00087",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-010"
+        },
+        "effectiveDateTime": "2024-02-08",
+        "valueQuantity": {
+          "value": 96,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Encounter-enc-006",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-006",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "EMER",
+          "display": "emergency"
+        },
+        "type": [
+          {
+            "text": "Post-COVID symptom flare"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "participant": [
+          {
+            "individual": {
+              "display": "Pulmonology service"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-03-02",
+          "end": "2024-03-07"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00088",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00088",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-006"
+        },
+        "effectiveDateTime": "2024-03-02",
+        "valueQuantity": {
+          "value": 87.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00089",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00089",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-006"
+        },
+        "effectiveDateTime": "2024-03-02",
+        "valueQuantity": {
+          "value": 147,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00090",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00090",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-006"
+        },
+        "effectiveDateTime": "2024-03-02",
+        "valueQuantity": {
+          "value": 90,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00091",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00091",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-006"
+        },
+        "effectiveDateTime": "2024-03-02",
+        "valueQuantity": {
+          "value": 106,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00092",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00092",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-006"
+        },
+        "effectiveDateTime": "2024-03-02",
+        "valueQuantity": {
+          "value": 23,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00093",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00093",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-006"
+        },
+        "effectiveDateTime": "2024-03-02",
+        "valueQuantity": {
+          "value": 38.1,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00094",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00094",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-006"
+        },
+        "effectiveDateTime": "2024-03-02",
+        "valueQuantity": {
+          "value": 87,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Encounter-enc-011",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-011",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "text": "Routine follow-up"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "participant": [
+          {
+            "individual": {
+              "display": "Internal Medicine service"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-06-06",
+          "end": "2024-06-06"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00095",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00095",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1988-5",
+              "display": "C-reactive protein"
+            }
+          ],
+          "text": "C-reactive protein"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-011"
+        },
+        "effectiveDateTime": "2024-06-06",
+        "valueQuantity": {
+          "value": 4.4,
+          "unit": "mg/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "unit": "mg/L"
+            },
+            "high": {
+              "value": 5,
+              "unit": "mg/L"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00096",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00096",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "48065-7",
+              "display": "D-dimer"
+            }
+          ],
+          "text": "D-dimer"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-011"
+        },
+        "effectiveDateTime": "2024-06-06",
+        "valueQuantity": {
+          "value": 606,
+          "unit": "ng/mL FEU",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL FEU"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0,
+              "unit": "ng/mL FEU"
+            },
+            "high": {
+              "value": 500,
+              "unit": "ng/mL FEU"
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00097",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00097",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2276-4",
+              "display": "Ferritin"
+            }
+          ],
+          "text": "Ferritin"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-011"
+        },
+        "effectiveDateTime": "2024-06-06",
+        "valueQuantity": {
+          "value": 325,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 30,
+              "unit": "ng/mL"
+            },
+            "high": {
+              "value": 400,
+              "unit": "ng/mL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00098",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00098",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "731-0",
+              "display": "Absolute lymphocyte count"
+            }
+          ],
+          "text": "Absolute lymphocyte count"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-011"
+        },
+        "effectiveDateTime": "2024-06-06",
+        "valueQuantity": {
+          "value": 1.2,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "10*3/uL"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 1.0,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 4.0,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00099",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00099",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "14804-9",
+              "display": "Lactate dehydrogenase"
+            }
+          ],
+          "text": "Lactate dehydrogenase"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-011"
+        },
+        "effectiveDateTime": "2024-06-06",
+        "valueQuantity": {
+          "value": 257,
+          "unit": "U/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "U/L"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 122,
+              "unit": "U/L"
+            },
+            "high": {
+              "value": 222,
+              "unit": "U/L"
+            }
+          }
+        ],
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00100",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00100",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-011"
+        },
+        "effectiveDateTime": "2024-06-06",
+        "valueQuantity": {
+          "value": 88.4,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00101",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00101",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-011"
+        },
+        "effectiveDateTime": "2024-06-06",
+        "valueQuantity": {
+          "value": 125,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00102",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00102",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ],
+          "text": "Diastolic blood pressure"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-011"
+        },
+        "effectiveDateTime": "2024-06-06",
+        "valueQuantity": {
+          "value": 80,
+          "unit": "mm[Hg]",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00103",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00103",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-011"
+        },
+        "effectiveDateTime": "2024-06-06",
+        "valueQuantity": {
+          "value": 77,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00104",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00104",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ],
+          "text": "Respiratory rate"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-011"
+        },
+        "effectiveDateTime": "2024-06-06",
+        "valueQuantity": {
+          "value": 17,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00105",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00105",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-011"
+        },
+        "effectiveDateTime": "2024-06-06",
+        "valueQuantity": {
+          "value": 36.9,
+          "unit": "Cel",
+          "system": "http://unitsofmeasure.org",
+          "code": "Cel"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Observation-obs-00106",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-00106",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation"
+            }
+          ],
+          "text": "Oxygen saturation"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "encounter": {
+          "reference": "Encounter/enc-011"
+        },
+        "effectiveDateTime": "2024-06-06",
+        "valueQuantity": {
+          "value": 94,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:MedicationRequest-med-000",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-000",
+        "status": "completed",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "3264"
+            }
+          ],
+          "text": "Dexamethasone"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "authoredOn": "2022-02-22",
+        "reasonCode": [
+          {
+            "text": "Anti-inflammatory for hypoxaemic COVID-19"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "6 mg IV/PO daily x10 days"
+          }
+        ],
+        "dispenseRequest": {
+          "validityPeriod": {
+            "start": "2022-02-22",
+            "end": "2022-03-06"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:MedicationRequest-med-001",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-001",
+        "status": "completed",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "2284718"
+            }
+          ],
+          "text": "Remdesivir"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "authoredOn": "2022-02-22",
+        "reasonCode": [
+          {
+            "text": "Antiviral for hospitalised COVID-19"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "200 mg then 100 mg IV daily x5"
+          }
+        ],
+        "dispenseRequest": {
+          "validityPeriod": {
+            "start": "2022-02-22",
+            "end": "2022-02-28"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:MedicationRequest-med-002",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-002",
+        "status": "completed",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "67108"
+            }
+          ],
+          "text": "Enoxaparin"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "authoredOn": "2022-02-22",
+        "reasonCode": [
+          {
+            "text": "VTE prophylaxis during admission"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "40 mg SC daily"
+          }
+        ],
+        "dispenseRequest": {
+          "validityPeriod": {
+            "start": "2022-02-22",
+            "end": "2022-03-06"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:MedicationRequest-med-003",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "med-003",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "7261"
+            }
+          ],
+          "text": "Low-dose naltrexone"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "authoredOn": "2023-04-09",
+        "reasonCode": [
+          {
+            "text": "Symptomatic management of long COVID fatigue"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "4.5 mg PO nightly"
+          }
+        ],
+        "dispenseRequest": {
+          "validityPeriod": {
+            "start": "2023-04-09"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Procedure-proc-000",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc-000",
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "71046",
+              "display": "Chest radiograph, 2 views"
+            }
+          ],
+          "text": "Chest radiograph, 2 views"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "performedDateTime": "2022-02-22"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Procedure-proc-001",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc-001",
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "71275",
+              "display": "CT pulmonary angiography"
+            }
+          ],
+          "text": "CT pulmonary angiography"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "performedDateTime": "2022-03-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Procedure-proc-002",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc-002",
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "94010",
+              "display": "Spirometry"
+            }
+          ],
+          "text": "Spirometry"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "performedDateTime": "2022-08-21"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:Procedure-proc-003",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "proc-003",
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "94618",
+              "display": "Six-minute walk test"
+            }
+          ],
+          "text": "Six-minute walk test"
+        },
+        "subject": {
+          "reference": "Patient/synthetic-132012"
+        },
+        "performedDateTime": "2022-11-17"
+      }
+    }
+  ]
+}
